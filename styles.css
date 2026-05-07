@@ -60,3 +60,48 @@ button:hover {
 #result.show {
     display: block;
 }
+
+/* Dark mode styles */
+.theme-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.theme-toggle input[type="checkbox"] {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+body.dark-mode .container {
+    background-color: #2d2d2d;
+    color: #ffffff;
+}
+
+body.dark-mode h1 {
+    color: #ffffff;
+}
+
+body.dark-mode p {
+    color: #cccccc;
+}
+
+body.dark-mode #result {
+    background-color: #3d3d3d;
+    border-left-color: #4CAF50;
+}
+
+body.dark-mode .theme-toggle {
+    background-color: #2d2d2d;
+    color: #ffffff;
+    border: 1px solid #444;
+}
