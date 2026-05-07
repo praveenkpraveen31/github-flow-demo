@@ -18,3 +18,8 @@ function divide(a, b) {
     }
     return a / b;
 }
+
+function validateEmail(email) {
+    const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return pattern.test(email);
+}
