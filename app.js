@@ -1,4 +1,4 @@
-// Main application
+// Main application with validation
 
 function displayResult(result) {
     const resultDiv = document.getElementById('result');
@@ -6,13 +6,30 @@ function displayResult(result) {
     resultDiv.classList.add('show');
 }
 
-// Override button functions to show results
+// Validation functions
+function validateInput(value) {
+    if (!value || value.trim() === '') {
+        return false;
+    }
+    return true;
+}
+
+// Add with validation
 function add(a, b) {
-    const result = window.add ? a + b : a + b;
+    if (!validateInput(a) || !validateInput(b)) {
+        displayResult('Invalid input');
+        return;
+    }
+    const result = parseFloat(a) + parseFloat(b);
     displayResult(result);
 }
 
+// Multiply with validation
 function multiply(a, b) {
-    const result = a * b;
+    if (!validateInput(a) || !validateInput(b)) {
+        displayResult('Invalid input');
+        return;
+    }
+    const result = parseFloat(a) * parseFloat(b);
     displayResult(result);
 }

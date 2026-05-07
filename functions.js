@@ -18,3 +18,13 @@ function divide(a, b) {
     }
     return a / b;
 }
+
+function validateEmail(email) {
+    const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return pattern.test(email);
+}
+
+function validatePhone(phone) {
+    const pattern = /^\d{3}-\d{3}-\d{4}$/;
+    return pattern.test(phone);
+}
