@@ -33,3 +33,24 @@ function multiply(a, b) {
     const result = parseFloat(a) * parseFloat(b);
     displayResult(result);
 }
+
+// Dark mode functionality
+const darkModeToggle = document.getElementById('darkModeToggle');
+const body = document.body;
+
+// Check for saved dark mode preference
+if (localStorage.getItem('darkMode') === 'enabled') {
+    body.classList.add('dark-mode');
+    darkModeToggle.checked = true;
+}
+
+// Toggle dark mode
+darkModeToggle.addEventListener('change', function() {
+    if (this.checked) {
+        body.classList.add('dark-mode');
+        localStorage.setItem('darkMode', 'enabled');
+    } else {
+        body.classList.remove('dark-mode');
+        localStorage.setItem('darkMode', 'disabled');
+    }
+});
